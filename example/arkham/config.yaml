@@ -1,0 +1,22 @@
+title_text: "注意！本游戏包含以下要素！"
+
+layout:
+  points_per_row: 5
+  margin: 24
+  row_spacing: 32
+  column_spacing: 48
+  title_image_text_spacing: 20
+
+font:
+  title_size: 36
+  point_text_size: 20
+  font_file: "C:\\Windows\\Fonts\\msyh.ttc"
+
+image:
+  title_image_size: 100
+  point_image_size: 80
+
+canvas:
+  top_margin: 40
+  section_spacing: 40
+  side_margin: 40
