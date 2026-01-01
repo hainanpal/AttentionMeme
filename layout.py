@@ -36,7 +36,7 @@ def draw_meme(input_dir: str):
     # 计算画布高度
     rows = (len(points) + config.layout.points_per_row - 1) // config.layout.points_per_row
     points_block_height = (
-        rows * (config.image.point_image_size + config.font.point_text_size)
+        rows * (config.image.point_image_size + config.font.point_text_size + config.layout.margin)
         + (rows - 1) * config.layout.row_spacing
     )
     canvas_height = (
@@ -116,6 +116,7 @@ def draw_meme(input_dir: str):
         y = current_y + row * (
             config.image.point_image_size
             + config.font.point_text_size
+            + config.layout.margin
             + config.layout.row_spacing
         )
 
@@ -128,7 +129,7 @@ def draw_meme(input_dir: str):
         text_bbox = draw.textbbox((0, 0), item.text, font=font_point)
         text_width = text_bbox[2] - text_bbox[0]
         text_x = x + (config.image.point_image_size - text_width) // 2
-        text_y = y + config.image.point_image_size + 5
+        text_y = y + config.image.point_image_size + config.layout.margin
         draw.text((text_x, text_y), item.text, fill="black", font=font_point)
     
     # 保存

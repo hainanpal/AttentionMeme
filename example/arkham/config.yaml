@@ -1,9 +1,9 @@
 title_text: "注意！本游戏包含以下要素！"
 
 layout:
-  points_per_row: 5
-  margin: 24
-  row_spacing: 32
+  points_per_row: 6
+  margin: 3
+  row_spacing: 28
   column_spacing: 48
   title_image_text_spacing: 20
 
